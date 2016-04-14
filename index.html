@@ -40,67 +40,127 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section data-background-iframe="http://77e38b91.ngrok.io/" >
+				<!-- <section data-background-iframe="http://77e38b91.ngrok.io/" > -->
 				</section>
 
 				<section>
-					<h2>INTRO SECTION</h2>
-					<h3>Charlie Gerard</h3>
-					<h3>Daisy Smith</h3>
-					<p>
-						<small>put images here? i'll leave this slide to you</small>
-					</p>
+					<h2>About us</h2>
+					<div class="person">
+						<img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/005/048/342/17f9554.jpg" style="width: 200px">
+						<h3>Charlie Gerard</h3>
+						<p><small>Software Developer @ThoughtWorks</small></p>
+					</div>
+					<div class="person">
+						<img src="https://pbs.twimg.com/profile_images/719689969468485633/gyrHJUoy.jpg" style="width: 200px" />
+						<h3>Daisy Smith</h3>
+						<p><small>Creative Developer @Google Creative Lab</small></p>
+					</div>
 				</section>
 
 				<section>
 					<h2>CREATIVE CODING</h2>
+					<h4>So what is it?</h4>
 					<p>
-						<small>So what is it?</small>
+						Type of programming that is more about creating an experience than something functional (TO REVIEW)
 					</p>
 				</section>
 
 				<section>
+					<section>
+						<h2>EXAMPLES</h2>
+					</section>
+
+					<section>
+						<h2>custom navigation</h2>
 						<a href="http://www.offpixel.co/" target="_blank">
-							<img data-src="/images/menu-4th-slide.png">
+							<img data-src="/images/menu-4th-slide.png" style="width: 1000px">
 						</a>
+					</section>
+
+					<section>
+						<h2>music video</h2>
+						<a href="http://almostforgot.me/" target="_blank">
+							<img data-src="http://o.aolcdn.com/hss/storage/midas/7e9f9965a1acdb11d64ba6da0d00c3f1/203660566/heartbeat-ed.jpg" style="width: 1000px">
+						</a>
+						<a href="http://almostforgot.me/" target="_blank"><p>#almosforgot</p></a>
+					</section>
+
+					<section>
+						<h2>Data Visualization</h2>
+						<a href="http://histography.io/" target="_blank">
+							<img data-src="/images/datavis-6th-slide.png">
+						</a>
+					</section>
+
+					<section>
+						<h2>Interaction</h2>
+						<a href="https://lightsaber.withgoogle.com/" target="_blank">
+							<img data-src="/images/starwars-5th-slide.png">
+						</a>
+					</section>
+
+					<section>
+						<h2>threeejs example goes here</h2>
+						<a href="https://lightsaber.withgoogle.com/" target="_blank">
+
+						</a>
+					</section>
 				</section>
 
 				<section>
-					<h2>music video</h2>
-					<a href="http://www.offpixel.co/" target="_blank">
-						<img data-src="/images/menu-4th-slide.png">
-					</a>
+					<section>
+						<h2>WHY IS IT IMPORTANT</h2>
+						<h1>BECAUSE</h1>
+					</section>
+					<section>
+						<h2>Innovation</h2>
+						<p>Good way to differentiate yourself</p>
+					</section>
+					<section>
+						<h3>More engaging experiences for the user</h3>
+						<p>Everyone prefers interacting with engaging experiences</p>
+					</section>
+					<section>
+						<h3>Skills</h3>
+						<p>
+							More and more things can be done in the browser, important to stay up to date
+						</p>
+					</section>
+					<section>
+						<h3>Different way of thinking</h3>
+					</section>
 				</section>
 
 				<section>
-					<a href="http://histography.io/" target="_blank">
-						<img data-src="/images/datavis-6th-slide.png">
-					</a>
+					<h2>Getting started</h2>
 				</section>
 
 				<section>
-					<a href="https://lightsaber.withgoogle.com/" target="_blank">
-						<img data-src="/images/starwars-5th-slide.png">
-					</a>
-				</section>
-
-				<section>
-					<h2>threeejs example goes here</h2>
-					<a href="https://lightsaber.withgoogle.com/" target="_blank">
-						<img data-src="/images/starwars-5th-slide.png">
-					</a>
-				</section>
-
-
-				<section>
-					<small>WHY IS IT IMPORTANT</small>
-					<h1>BECAUSE</h1>
-				</section>
-
-				<section>
-					<h1>demo roatating cube</h1>
+					<h1>demo rotating cube</h1>
 					<pre><code data-trim data-noescape>
-							\code dcode
+						var scene = new THREE.Scene();
+
+var camera = new THREE.PerspectiveCamera( 30, width / height, 1, 1000 );
+camera.position.set(0, 3, 7);
+camera.lookAt( new THREE.Vector3(0,0,0));
+
+var scale = 2.5;
+var geometry = new THREE.CubeGeometry( scale, scale, scale );
+var material = new THREE.MeshBasicMaterial( { color: 0xdddddd } );
+
+var mesh = new THREE.Mesh( geometry, material );
+scene.add( mesh );
+
+var renderer = new THREE.WebGLRenderer({canvas: canvas, antialias: true});
+renderer.setSize( width, height );
+
+function animate() {
+	requestAnimationFrame( animate, canvas );
+	mesh.rotation.y += 0.008;
+	renderer.render( scene, camera );
+}
+animate();
+}
 					</code></pre>
 				</section>
 
@@ -119,10 +179,38 @@
 				</section>
 
 				<section>
+					<h1>web socket bills demo</h1>
+					<pre><code data-trim data-noescape>
+							\code dcode
+					</code></pre>
+				</section>
+
+				<section>
+					<h1>Face tracking demo</h1>
+					<pre><code data-trim data-noescape>
+							\code dcode
+					</code></pre>
+				</section>
+
+				<section>
 					<h1>WHERE TO START</h1>
 					<pre><code data-trim data-noescape>
 							\code dcode
 					</code></pre>
+				</section>
+
+				<section>
+					<h2>RESOURCES</h2>
+					<ul>
+						<li><a href="http://codepen.io/" target="_blank">Codepen</a></li>
+						<li><a href="http://codedoodl.es/" target="_blank">Code Doodles</a></li>
+						<li><a href="https://www.chromeexperiments.com/" target="_blank">Chrome Experiments</a></li>
+						<li><a href="https://www.androidexperiments.com/" target="_blank">Android Experiments</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Thank you.</h2>
 				</section>
 
 			</div>
